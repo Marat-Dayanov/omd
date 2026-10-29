@@ -1,0 +1,17 @@
+# Настройки PyCharm
+.idea/
+*.iml
+
+# Кэш Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальные окружения
+venv/
+.venv/
+env/
+
+# Системные файлы
+.DS_Store
+Thumbs.db
