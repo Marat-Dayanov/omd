@@ -1,5 +1,5 @@
 # Настройки PyCharm
-../.idea/
+.idea/
 *.iml
 
 # Кэш Python
