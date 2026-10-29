@@ -29,5 +29,5 @@ def main():
           [day["day"] for day in days if day["returns"] / day["orders"] > 0.2])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

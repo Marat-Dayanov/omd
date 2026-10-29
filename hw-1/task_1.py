@@ -20,5 +20,5 @@ def main():
     print("Всего разных товаров:", len(moscow | kazan))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

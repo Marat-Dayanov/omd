@@ -56,5 +56,5 @@ def main():
     print(f"Их доля среди всех отзывов: {bad_reviews_amount / len(reviews)}")
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

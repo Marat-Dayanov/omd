@@ -36,5 +36,5 @@ def main():
           [query for query, amount in counter.items() if amount == 1])
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

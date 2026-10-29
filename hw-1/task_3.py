@@ -34,5 +34,5 @@ def main():
                if order["status"] == "delivered"]) / delivered_orders_number)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
