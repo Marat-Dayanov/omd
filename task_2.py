@@ -12,23 +12,29 @@
 from collections import Counter
 
 
-queries = [
-    "чехол",
-    "iphone",
-    "чехол",
-    "наушники",
-    "iphone",
-    "iphone",
-    "кабель",
-    "чехол",
-    "iphone",
-]
+def main():
+    queries = [
+        "чехол",
+        "iphone",
+        "чехол",
+        "наушники",
+        "iphone",
+        "iphone",
+        "кабель",
+        "чехол",
+        "iphone",
+    ]
 
-print("всего поисковых запросов в ленте:", len(set(queries)))
-counter = Counter(queries)
-print("Cколько раз ввели каждый запрос:")
-for k, v in counter.items():
-    print(k, "-", v)
-print("Чаще всего вводили запрос:", counter.most_common(1)[0][0])
-print("Его доля среди всех поисков:", max(counter.values()) / len(queries))
-print("Встретились один раз:", [query for query, amount in counter.items() if amount == 1])
+    print("Всего поисковых запросов в ленте:", len(queries))
+    counter = Counter(queries)
+    print("Cколько раз ввели каждый запрос:")
+    for k, v in counter.items():
+        print(k, "-", v)
+    print("Чаще всего вводили запрос:", counter.most_common(1)[0][0])
+    print("Его доля среди всех поисков:", max(counter.values()) / len(queries))
+    print("Встретились один раз:",
+          [query for query, amount in counter.items() if amount == 1])
+
+
+if __name__ == '__main__':
+    main()

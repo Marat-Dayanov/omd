@@ -9,10 +9,16 @@
 - сколько разных товаров на обоих складах вместе
 """
 
-moscow = {201, 202, 203, 204}
-kazan = {203, 204, 205, 206}
 
-print("Можно забрать в любом из двух городов:", moscow | kazan)
-print("Только в Москве:", moscow - kazan)
-print("Только в Казани:", kazan - moscow)
-print("Всего разных товаров:", len(moscow | kazan))
+def main():
+    moscow = {201, 202, 203, 204}
+    kazan = {203, 204, 205, 206}
+
+    print("Можно забрать в любом из двух городов:", moscow & kazan)
+    print("Только в Москве:", moscow - kazan)
+    print("Только в Казани:", kazan - moscow)
+    print("Всего разных товаров:", len(moscow | kazan))
+
+
+if __name__ == '__main__':
+    main()
