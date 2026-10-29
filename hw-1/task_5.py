@@ -39,19 +39,21 @@ def main():
     products = set([review["product"] for review in reviews])
     product_average_rating = {product: product_sum_stars[product] / product_review_number[product]
                               for product in products}
+    print("Средняя оценка каждого товара:")
     print(product_average_rating)
 
     products_with_two_or_more_reviews = [product for product in products
                                          if product_review_number[product] >= 2]
     min_average_rating = min(product_average_rating[product]
                              for product in products_with_two_or_more_reviews)
+    print("Худший товар по средней оценке среди тех, у кого хотя бы два отзыва:")
     print([product for product in products_with_two_or_more_reviews
            if product_average_rating[product] == min_average_rating])
 
     bad_reviews_amount = sum([1 for review in reviews if review["stars"] in (1, 2)])
-    print(bad_reviews_amount)
+    print(f"Количество отзывов на 1 или 2 звезды: {bad_reviews_amount}")
 
-    print(bad_reviews_amount / len(reviews))
+    print(f"Их доля среди всех отзывов: {bad_reviews_amount / len(reviews)}")
 
 
 if __name__ == '__main__':
